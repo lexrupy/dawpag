@@ -1,0 +1,4 @@
+*.sqlite
+DawPaG.egg-info
+.bzr
+.bzrignore

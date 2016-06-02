@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
+<!--Generated with glade3 3.4.5 on Mon Aug  4 15:32:53 2008 -->
+<glade-interface>
+  <widget class="GtkWindow" id="BaseWindow">
+    <property name="width_request">760</property>
+    <property name="height_request">570</property>
+    <property name="title" translatable="yes">Basic Window</property>
+    <property name="modal">True</property>
+    <property name="window_position">GTK_WIN_POS_CENTER_ON_PARENT</property>
+    <property name="skip_taskbar_hint">True</property>
+    <signal name="destroy_event" handler="on_BaseWindow_destroy_event"/>
+    <child>
+      <widget class="GtkVBox" id="base_vb_main">
+        <property name="visible">True</property>
+        <property name="border_width">5</property>
+        <property name="spacing">5</property>
+        <child>
+          <widget class="GtkHBox" id="base_hb_title">
+            <property name="visible">True</property>
+            <child>
+              <widget class="GtkImage" id="base_im_title">
+                <property name="visible">True</property>
+                <property name="stock">gtk-dialog-info</property>
+                <property name="icon_size">6</property>
+              </widget>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="base_lb_title">
+                <property name="visible">True</property>
+                <property name="xalign">0.029999999329447746</property>
+                <property name="label" translatable="yes">&lt;span size="xx-large"&gt;&lt;b&gt;Titulo do Formulario&lt;/b&gt;&lt;/span&gt;</property>
+                <property name="use_markup">True</property>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkNotebook" id="base_nb_main">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="show_tabs">False</property>
+            <signal name="switch_page" handler="on_base_nb_main_switch_page"/>
+            <child>
+              <widget class="GtkVBox" id="base_tab_search">
+                <property name="visible">True</property>
+                <property name="border_width">5</property>
+                <child>
+                  <widget class="GtkHBox" id="base_hb_search">
+                    <property name="visible">True</property>
+                    <property name="border_width">1</property>
+                    <property name="spacing">5</property>
+                    <child>
+                      <widget class="GtkAccelLabel" id="base_lb_search">
+                        <property name="visible">True</property>
+                        <property name="xalign">0</property>
+                        <property name="label" translatable="yes">&lt;b&gt;_Pesquisar:&lt;/b&gt;</property>
+                        <property name="use_markup">True</property>
+                        <property name="use_underline">True</property>
+                        <property name="mnemonic_widget">base_ed_search_field</property>
+                        <property name="accel_widget">base_ed_search_field</property>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkEntry" id="base_ed_search_field">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="has_focus">True</property>
+                        <property name="tooltip_markup">Inclua os dados para pesquisa</property>
+                        <signal name="key_press_event" handler="on_base_ed_search_field_key_press_event"/>
+                      </widget>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="base_lb_search_on">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">em:</property>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkComboBox" id="base_cb_fields">
+                        <property name="width_request">170</property>
+                        <property name="visible">True</property>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkButton" id="base_bt_search">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="response_id">0</property>
+                        <signal name="clicked" handler="on_base_bt_search_clicked"/>
+                        <child>
+                          <widget class="GtkHBox" id="base_bt_search_hbox">
+                            <property name="visible">True</property>
+                            <child>
+                              <widget class="GtkImage" id="base_bt_search_image">
+                                <property name="visible">True</property>
+                                <property name="xpad">2</property>
+                                <property name="stock">gtk-find</property>
+                              </widget>
+                            </child>
+                            <child>
+                              <widget class="GtkLabel" id="base_bt_search_label">
+                                <property name="visible">True</property>
+                                <property name="label" translatable="yes">_Buscar</property>
+                                <property name="use_markup">True</property>
+                                <property name="use_underline">True</property>
+                              </widget>
+                              <packing>
+                                <property name="position">1</property>
+                              </packing>
+                            </child>
+                          </widget>
+                        </child>
+                      </widget>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">False</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="expand">False</property>
+                  </packing>
+                </child>
+                <child>
+                  <widget class="GtkScrolledWindow" id="base_sw_tv_data">
+                    <property name="visible">True</property>
+                    <property name="can_focus">True</property>
+                    <property name="hscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                    <property name="vscrollbar_policy">GTK_POLICY_AUTOMATIC</property>
+                    <property name="shadow_type">GTK_SHADOW_OUT</property>
+                    <child>
+                      <widget class="GtkTreeView" id="base_tv_data">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="extension_events">GDK_EXTENSION_EVENTS_CURSOR</property>
+                        <property name="border_width">1</property>
+                        <property name="headers_clickable">True</property>
+                        <property name="reorderable">True</property>
+                        <property name="rules_hint">True</property>
+                        <signal name="button_press_event" handler="on_base_tv_data_button_press_event"/>
+                        <signal name="key_press_event" handler="on_base_tv_data_key_press_event"/>
+                        <signal name="row_activated" handler="on_base_tv_data_row_activated"/>
+                        <signal name="cursor_changed" handler="on_base_tv_data_cursor_changed"/>
+                      </widget>
+                    </child>
+                  </widget>
+                  <packing>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="base_nb_main_tab0_label">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_Consulta</property>
+                <property name="use_markup">True</property>
+                <property name="use_underline">True</property>
+              </widget>
+              <packing>
+                <property name="type">tab</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkVBox" id="base_tab_record_data">
+                <property name="visible">True</property>
+                <property name="extension_events">GDK_EXTENSION_EVENTS_ALL</property>
+                <property name="border_width">5</property>
+                <property name="spacing">5</property>
+                <child>
+                  <widget class="GtkEventBox" id="dw_placeholder">
+                    <property name="visible">True</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkLabel" id="base_nb_main_tab1_label">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_Dados</property>
+                <property name="use_markup">True</property>
+                <property name="use_underline">True</property>
+              </widget>
+              <packing>
+                <property name="type">tab</property>
+                <property name="position">1</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkHButtonBox" id="base_button_box">
+            <property name="visible">True</property>
+            <property name="spacing">5</property>
+            <property name="layout_style">GTK_BUTTONBOX_END</property>
+            <child>
+              <widget class="GtkButton" id="base_bt_close">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text">bt_close</property>
+                <property name="response_id">0</property>
+                <signal name="clicked" handler="on_base_bt_close_clicked"/>
+                <child>
+                  <widget class="GtkHBox" id="base_bt_close_hbox">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkImage" id="base_bt_close_image">
+                        <property name="visible">True</property>
+                        <property name="stock">gtk-quit</property>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="base_bt_close_label">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">_Sair</property>
+                        <property name="use_markup">True</property>
+                        <property name="use_underline">True</property>
+                      </widget>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkButton" id="base_bt_new_cancel">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text">bt_new_cancel</property>
+                <property name="response_id">0</property>
+                <signal name="clicked" handler="on_base_bt_new_cancel_clicked"/>
+                <child>
+                  <widget class="GtkHBox" id="base_bt_new_cancel_hbox">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkImage" id="base_bt_new_cancel_image">
+                        <property name="visible">True</property>
+                        <property name="stock">gtk-new</property>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="base_bt_new_cancel_label">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">_Novo</property>
+                        <property name="use_markup">True</property>
+                        <property name="use_underline">True</property>
+                      </widget>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkButton" id="base_bt_edit_goback">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text">bt_edit_goback</property>
+                <property name="response_id">0</property>
+                <signal name="clicked" handler="on_base_bt_edit_goback_clicked"/>
+                <child>
+                  <widget class="GtkHBox" id="base_bt_edit_goback_hbox">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkImage" id="base_bt_edit_goback_image">
+                        <property name="visible">True</property>
+                        <property name="stock">gtk-edit</property>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="base_bt_edit_goback_label">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Alt_era</property>
+                        <property name="use_markup">True</property>
+                        <property name="use_underline">True</property>
+                      </widget>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <widget class="GtkButton" id="base_bt_next_confirm">
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text">bt_next_confirm</property>
+                <property name="response_id">0</property>
+                <signal name="clicked" handler="on_base_bt_next_confirm_clicked"/>
+                <child>
+                  <widget class="GtkHBox" id="base_bt_next_confirm_hbox">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkImage" id="base_bt_next_confirm_image">
+                        <property name="visible">True</property>
+                        <property name="stock">gtk-yes</property>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkLabel" id="base_bt_next_confirm_label">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">C_onfirma</property>
+                        <property name="use_markup">True</property>
+                        <property name="use_underline">True</property>
+                      </widget>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+              <packing>
+                <property name="position">3</property>
+              </packing>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="pack_type">GTK_PACK_END</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+  <widget class="GtkMenu" id="base_mnu_tv_data">
+    <property name="visible">True</property>
+    <child>
+      <widget class="GtkImageMenuItem" id="base_mnu_tv_data_delete">
+        <property name="visible">True</property>
+        <property name="has_tooltip">True</property>
+        <property name="tooltip_text">Exclui o registro selecionado.</property>
+        <property name="label" translatable="yes">gtk-delete</property>
+        <property name="use_underline">True</property>
+        <property name="use_stock">True</property>
+        <signal name="activate" handler="on_base_mnu_tv_data_delete_activate"/>
+        <accelerator key="Delete" modifiers="" signal="activate"/>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>
